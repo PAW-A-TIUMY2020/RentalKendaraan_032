@@ -7,5 +7,5 @@ namespace RentalKendaraan_032.Models
     {
         public int IdGender { get; set; }
         public string NamaGender { get; set; }
-    }
+    } 
 }
