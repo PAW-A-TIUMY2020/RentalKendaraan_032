@@ -25,6 +25,7 @@
     <UseGlobalApplicationHostFile />
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <Use64BitIISExpress />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -457,8 +458,18 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\Customer.cs" />
+    <Compile Include="Models\ErrorViewModel.cs" />
+    <Compile Include="Models\Gender.cs" />
     <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Models\Jaminan.cs" />
+    <Compile Include="Models\JenisKendaraan.cs" />
+    <Compile Include="Models\Kendaraan.cs" />
+    <Compile Include="Models\KondisiKendaraan.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\Peminjaman.cs" />
+    <Compile Include="Models\Pengembalian.cs" />
+    <Compile Include="Models\RentKendaraanContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
