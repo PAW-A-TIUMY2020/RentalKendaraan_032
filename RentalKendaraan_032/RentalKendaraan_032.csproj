@@ -452,8 +452,17 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\CustomersController.cs" />
+    <Compile Include="Controllers\GendersController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\IActionResult.cs" />
+    <Compile Include="Controllers\JaminansController.cs" />
+    <Compile Include="Controllers\JenisKendaraansController.cs" />
+    <Compile Include="Controllers\KendaraansController.cs" />
+    <Compile Include="Controllers\KondisiKendaraansController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\PeminjamenController.cs" />
+    <Compile Include="Controllers\PengembaliansController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -467,6 +476,7 @@
     <Compile Include="Models\Kendaraan.cs" />
     <Compile Include="Models\KondisiKendaraan.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\PageinatedList.cs" />
     <Compile Include="Models\Peminjaman.cs" />
     <Compile Include="Models\Pengembalian.cs" />
     <Compile Include="Models\RentKendaraanContext.cs" />
@@ -534,9 +544,20 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Kendaraans\Create.cshtml" />
+    <Content Include="Views\Kendaraans\Delete.cshtml" />
+    <Content Include="Views\Kendaraans\Details.cshtml" />
+    <Content Include="Views\Kendaraans\Edit.cshtml" />
+    <Content Include="Views\Kendaraans\Index.cshtml" />
+    <Content Include="Views\Peminjamens\Create.cshtml" />
+    <Content Include="Views\Peminjamens\Delete.cshtml" />
+    <Content Include="Views\Peminjamens\Details.cshtml" />
+    <Content Include="Views\Peminjamens\Edit.cshtml" />
+    <Content Include="Views\Peminjamens\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\Customers\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />

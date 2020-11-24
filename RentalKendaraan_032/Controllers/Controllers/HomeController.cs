@@ -1,7 +1,12 @@
-﻿using System.Diagnostics;
-using System.Web.Mvc;
+﻿using System;
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Linq;
+using System.Threading.Tasks;
+using Microsoft.AspNetCore.Mvc;
+using RentalKendaraan_002.Models;
 
-namespace RentalKendaraan_032.Controllers
+namespace RentalKendaraan_002.Controllers
 {
     public class HomeController : Controller
     {

@@ -1,0 +1,81 @@
+﻿@model PageinatedList<RentalKendaraan_032.Models.Peminjaman>
+
+@{
+    ViewData["Title"] = "Peminjaman";
+}
+
+<h2>Index</h2>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.TglPeminjaman)
+                <asp-action="Index" asp-route-sortOrder="@ViewData["DateSortParm"]" asp-route-currentFilter="@ViewData["CurrentFilter"]">Tanggal Peminjaman</a>
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Biaya)
+                <asp-action ="Index" asp-route-sortOrder="@ViewData["NameSortParm"]" asp-route-currentFilter="@ViewData["CurrentFilter"]">Nama Customer</a>
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IdCustomer)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IdJaminan)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IdKendaraan)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.TglPeminjaman)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IdKendaraan)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IdCustomer)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IdJaminan)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Biaya)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.IdPeminjaman">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.IdPeminjaman">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.IdPeminjaman">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+@{ 
+    var prevDisabled = !Model.HasPreviousPage ? "disabled" : "";
+    var nextDisabled = !Model.HasNextPage ? "disabled" : "";
+}
+
+<a asp-action="Index"
+   asp-route-sortOrder="@ViewData["CurrentSort"]"
+   asp-route-pageNumber="@(Model.PageIndex + 1)"
+   asp-route-currentFilter="@ViewData["CurrentFilter"]"
+   class="btn btn-default @prevDisabled">
+    Previous
+</a>
+
+<a asp-action="Index"
+   asp-route-sortOrder="@ViewData["CurrentSort"]"
+   asp-route-pageNumber="@(Model.PageIndex + 1)"
+   asp-route-currentFilter="@ViewData["CurrentFilter"]"
+   class="btn btn-default @prevDisabled">
+    Next
+</a>
